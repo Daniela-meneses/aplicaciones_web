@@ -1,0 +1,32 @@
+$def with (productos)
+
+    <div class="container mt-5">
+        <h3 class="titulo">Productos</h3>
+        <a href="/insertar" class="btn btn-primary">Insertar</a>
+
+        <div class="table-container mt-3">
+            <table border="1" id="table_contactos" class="table table-bordered">
+                <thead id="thead_contactos">
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Existencias</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody id="tbody_contactos">
+                    $for producto in productos:
+                    <tr>
+                        <td>$producto.nombre</td>
+                        <td>$producto.descripcion</td>
+                        <td>$producto.precio</td>
+                        <td>$producto.existencias</td>
+                        <td>
+                            <a href="/ver?nombre=$producto.nombre" class="btn btn-info">Ver</a>
+                            <a href="/actualizar?nombre=$producto.nombre" class="btn btn-warning">Editar</a>
+                            <a href="/borrar?nombre=$producto.nombre" class="btn btn-danger">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

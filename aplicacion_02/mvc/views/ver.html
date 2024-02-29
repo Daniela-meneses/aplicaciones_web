@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    $def with(producto)
+
+    <div class="container mt-5">
+        <div class="center-content">
+            <h1 class="titulo">Detalle del Producto $producto.nombre</h1>
+
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" value="$producto.nombre" class="form-control"><br>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <input type="text" value="$producto.descripcion" readonly class="form-control"><br>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" value="$producto.precio" readonly class="form-control"><br>
+            </div>
+            <div class="form-group">
+                <label for="existencias">Existencias:</label>
+                <input type="number" value="$producto.existencias" readonly class="form-control"><br>
+            </div>
+
+            <a href="/" class="btn btn-primary">Volver</a>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js links (optional, only needed if you use Bootstrap JavaScript features) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
